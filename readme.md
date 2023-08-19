@@ -17,7 +17,7 @@ This script allows you to automate the creation of Gmail accounts using the Sele
 1. Clone this repository:
 
    ```
-   git clone https://github.com/khaouitiabdelhakim/gmail-automation.git
+   git clone https://github.com/khaouitiabdelhakim/Gmail-Creation-Automation-Python.git
    ```
 
 2. Download the GeckoDriver executable and place it in the repository directory.
