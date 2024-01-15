@@ -14,9 +14,9 @@ service = Service('./geckodriver')
 driver = webdriver.Firefox(service=service)
 
 # your data
-your_first_name = "Jhon"
+your_first_name = "Gamal"
 your_last_name = "Doe"
-your_username = "johndoe2314pro" # johndoe2314pro@gmail.com // make sure to be unique
+your_username = "gama1445pro" # gama1445pro@gmail.com // make sure to be unique
 your_birthday = "02 3 1999" #dd m yyyy exp : 24 11 2003
 your_gender = "1" # 1:F 2:M 3:Not say 4:Custom
 your_password = "x,nscldsj123...FDKZ"
