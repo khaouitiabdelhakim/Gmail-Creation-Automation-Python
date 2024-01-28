@@ -1,22 +1,25 @@
-# Gmail Account Creation Automation Script - Version 1.0.0
+# Gmail Account Creation Automation Script - Version 1.1.0
 # Original script by Abdelhakim Khaouiti (khaouitiabdelhakim on GitHub)
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.firefox.service import Service
 
-# Create a Service object with the executable path (GeckoDriver)
-service = Service('./geckodriver')
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.chrome.options import Options as ChromeOptions
 
-# Initialize the Firefox driver with the Service object
-driver = webdriver.Firefox(service=service)
+#chrome_options = ChromeOptions()
+#chrome_options.add_argument("--disable-infobars")  # Optional: Disable info bars
+
+service = ChromeService('chromedriver.exe')
+driver = webdriver.Chrome(service=service) #, options=chrome_options)
+
 
 # your data
 your_first_name = "Gamal"
-your_last_name = "Doe"
-your_username = "gama1445pro" # gama1445pro@gmail.com // make sure to be unique
+your_last_name = "DoeLy"
+your_username = "gamadoe1445pro" # gama1445pro@gmail.com // make sure to be unique
 your_birthday = "02 3 1999" #dd m yyyy exp : 24 11 2003
 your_gender = "1" # 1:F 2:M 3:Not say 4:Custom
 your_password = "x,nscldsj123...FDKZ"
