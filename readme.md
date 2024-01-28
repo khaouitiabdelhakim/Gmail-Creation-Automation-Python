@@ -1,15 +1,15 @@
 # Gmail Account Creation Automation Script
 
-Automate the process of creating Gmail accounts using Selenium and Firefox WebDriver.
+Automate the process of creating Gmail accounts using Selenium and Chrome WebDriver.
 
 ## Overview
 
-This script allows you to automate the creation of Gmail accounts using the Selenium automation framework with the Firefox WebDriver. It navigates through the Gmail sign-up process by filling in the required details, such as name, username, password, and more.
+This script allows you to automate the creation of Gmail accounts using the Selenium automation framework with the Chrome WebDriver. It navigates through the Gmail sign-up process by filling in the required details, such as name, username, password, and more.
 
 ## Prerequisites
 
 - Python 3.x
-- GeckoDriver (Firefox WebDriver) - [Download GeckoDriver](https://github.com/mozilla/geckodriver/releases)
+- ChromeDriver - [Download ChromeDriver](https://sites.google.com/chromium.org/driver/)
 - Selenium library - Install using `pip install selenium`
 
 ## Usage
@@ -20,7 +20,7 @@ This script allows you to automate the creation of Gmail accounts using the Sele
    git clone https://github.com/khaouitiabdelhakim/Gmail-Creation-Automation-Python.git
    ```
 
-2. Download the GeckoDriver executable and place it in the repository directory.
+2. Download the ChromeDriver executable and place it in the repository directory.
 
 3. Install the required libraries:
 
@@ -47,3 +47,21 @@ This script is provided for educational and informational purposes only. The aut
 ## Credits
 
 Original script by Abdelhakim Khaouiti ([khaouitiabdelhakim on GitHub](https://github.com/khaouitiabdelhakim))
+
+## License
+This project is licensed under the MIT License 
+
+```
+Copyright 2024 KHAOUITI ABDELHAKIM
+
+Licensed under the MIT License
+You may obtain a copy of the License at
+
+http://opensource.org/licenses/MIT
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the MIT License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the MIT License.
+```
