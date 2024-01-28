@@ -47,3 +47,21 @@ This script is provided for educational and informational purposes only. The aut
 ## Credits
 
 Original script by Abdelhakim Khaouiti ([khaouitiabdelhakim on GitHub](https://github.com/khaouitiabdelhakim))
+
+## License
+This project is licensed under the MIT License 
+
+```
+Copyright 2024 KHAOUITI ABDELHAKIM
+
+Licensed under the MIT License
+You may obtain a copy of the License at
+
+http://opensource.org/licenses/MIT
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the MIT License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the MIT License.
+```
