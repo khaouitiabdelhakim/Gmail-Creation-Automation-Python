@@ -11,6 +11,9 @@ If you'd like to support further, consider buying me a coffee:
 ```
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee--yellow.svg?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/kh.abdelhakim)
 
+## Stats
+![Alt](https://repobeats.axiom.co/api/embed/7cdf5ac462f672830b29b9ba0169354897eb3f7c.svg "Repobeats analytics image")
+
 ## Overview
 
 This script allows you to automate the creation of Gmail accounts using the Selenium automation framework with the Chrome WebDriver. It navigates through the Gmail sign-up process by filling in the required details, such as name, username, password, and more.
