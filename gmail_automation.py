@@ -79,6 +79,8 @@ def fill_form(driver):
         next_button = driver.find_element(By.CLASS_NAME, "VfPpkd-LgbsSe")
         next_button.click()
 
+        print("full name fields filled successfully")
+
         # Wait for birthday fields to be visible
         wait = WebDriverWait(driver, 20)
         day = wait.until(EC.visibility_of_element_located((By.NAME, "day")))
@@ -100,20 +102,24 @@ def fill_form(driver):
         next_button = driver.find_element(By.CLASS_NAME, "VfPpkd-LgbsSe")
         next_button.click()
 
+        print("Birthday filled successfully")
+
         
        # Create custom email
         time.sleep(2)
-        if driver.find_elements(By.ID, "selectionc4") :
-            create_own_option = wait.until(EC.element_to_be_clickable((By.ID,"selectionc4") ))
+        if driver.find_elements(By.CLASS_NAME, "uxXgMe"):
+            create_own_option = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "[jsname='CeL6Qc']")))
             create_own_option.click()
         
-        create_own_email = wait.until(EC.element_to_be_clickable((By.NAME, "Username")))
+        wait.until(EC.element_to_be_clickable((By.NAME, "Username")))
         username_field = driver.find_element(By.NAME, "Username")
         username_field.clear()
         username_field.send_keys(your_username)
         next_button = driver.find_element(By.CLASS_NAME, "VfPpkd-LgbsSe")
         next_button.click()
         
+
+
         # Enter and confirm password
         password_field = wait.until(EC.visibility_of_element_located((By.NAME, "Passwd")))
         password_field.clear()
@@ -127,14 +133,39 @@ def fill_form(driver):
         next_button = driver.find_element(By.CLASS_NAME, "VfPpkd-LgbsSe")
         next_button.click()
 
-        # Skip phone number and recovery email steps
-        skip_buttons = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "button span.VfPpkd-vQzf8d")))
-        for button in skip_buttons:
-            button.click()
+
+        # Check if the phone number is needed
+        time.sleep(2)
+        if driver.find_elements(By.ID, "phoneNumberId"):
+            wait.until(EC.element_to_be_clickable((By.ID, "phoneNumberId")))
+            phonenumber_field = driver.find_element(By.ID, "phoneNumberId")
+            phonenumber_field.clear()
+            phonenumber_field.send_keys("+2126"+str(random.randint(10000000,99999999)))
+            next_button = driver.find_element(By.CLASS_NAME, "VfPpkd-vQzf8d")
+            next_button.click()
+            time.sleep(2)
+            ok = ok = not driver.find_element(By.CLASS_NAME, "AfGCob")
+            while not ok:
+                try:
+                    phonenumber_field.clear()
+                    phonenumber_field.send_keys("+2126"+str(random.randint(10000000,99999999)))
+                    next_button = driver.find_element(By.CLASS_NAME, "VfPpkd-vQzf8d")
+                    next_button.click()
+                    time.sleep(2)
+                    ok = ok = not driver.find_element(By.CLASS_NAME, "AfGCob")
+                    ok = not driver.find_element(By.CLASS_NAME, "AfGCob")
+                except:
+                    pass
+        else:
+            # Skip phone number and recovery email steps
+            skip_buttons = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "button span.VfPpkd-vQzf8d")))
+            for button in skip_buttons:
+                button.click()
 
         # Agree to terms
         agree_button = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "button span.VfPpkd-vQzf8d")))
         agree_button.click()
+
 
         print(f"Your Gmail successfully created:\n{{\ngmail: {your_username}@gmail.com\npassword: {your_password}\n}}")
 
